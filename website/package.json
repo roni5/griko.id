@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "build": "next build",
-    "dev": "yarn prebuild && next dev",
+    "dev": "pnpm prebuild && next dev",
     "export": "next export",
     "favicons": "npx favicons-compiled-cli -i public/icon.png -c config/favicons.json -o public/assets/",
-    "graphql": "env-cmd yarn graphql-codegen",
+    "graphql": "env-cmd pnpm graphql-codegen",
     "lint": "eslint --fix \"**/*.{js,cjs,mjs,jsx,graphql,gql,ts,tsx}\" && tsc --noEmit --pretty",
     "postbuild": "next-sitemap --config config/sitemap.js",
     "prebuild": "node scripts/prebuild.js",
@@ -63,6 +63,9 @@
     "@graphql-codegen/typescript": "^2",
     "@graphql-codegen/typescript-operations": "^2",
     "@graphql-codegen/typescript-react-query": "^3",
+    "@project/eslint-config": "*",
+    "@project/prettier-config": "*",
+    "@project/types": "*",
     "@types/node": "^16",
     "@types/react": "^18",
     "@types/tailwindcss": "^3"
@@ -85,7 +88,7 @@
       "prettier --write"
     ],
     "**/*.{js,cjs,mjs,ts,tsx}": [
-      "yarn workspace website eslint --fix"
+      "pnpm workspace website eslint --fix"
     ]
   },
   "prettier": "@project/prettier-config",

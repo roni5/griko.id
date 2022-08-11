@@ -12,12 +12,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
       - uses: actions/setup-node@v3
         with:
-          cache: "yarn"
+          cache: "pnpm"
           node-version-file: ".nvmrc"
           registry-url: "https://npm.pkg.github.com"
-      - run: yarn install
+      - run: pnpm install
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
-      - run: yarn lint
+      - run: pnpm lint

@@ -11,15 +11,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
       - uses: actions/setup-node@v3
         with:
-          cache: "yarn"
+          cache: "pnpm"
           node-version-file: ".nvmrc"
           registry-url: "https://npm.pkg.github.com"
-      - run: yarn install
+      - run: pnpm install
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
-      - run: yarn website graphql-codegen
+      - run: pnpm website graphql-codegen
         env:
           GRAPHQL_ENDPOINT: ${{ secrets.GRAPHQL_ENDPOINT }}
           GRAPHQL_TOKEN: ${{ secrets.GRAPHQL_TOKEN }}

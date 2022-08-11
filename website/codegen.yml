@@ -11,7 +11,7 @@ schema:
 
 hooks:
   afterOneFileWrite:
-    - yarn prettier --write
+    - pnpm prettier --write
 
 generates:
   "./schema.graphql":
@@ -19,7 +19,7 @@ generates:
       - schema-ast
     hooks:
       afterAllFileWrite:
-        - yarn prettier --write
+        - pnpm prettier --write
   "./__generated__/graphql.ts":
     plugins:
       - "typescript"
