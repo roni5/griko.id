@@ -1,4 +1,4 @@
-/// <reference types="@project/types/vercel" />
+/// <reference path="../vercel.d.ts" />
 
 require("cross-fetch/polyfill");
 if (!process.env.VERCEL) require("dotenv").config();

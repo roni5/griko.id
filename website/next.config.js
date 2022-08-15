@@ -1,6 +1,6 @@
 // @ts-check
-/// <reference types="@project/types/vercel" />
 /// <reference path="./env.d.ts" />
+/// <reference path="./vercel.d.ts" />
 
 const { withSuperjson } = require("next-superjson");
 const withTranspileModules = require("next-transpile-modules");

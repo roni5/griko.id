@@ -64,10 +64,10 @@
     "@graphql-codegen/typescript": "^2",
     "@graphql-codegen/typescript-operations": "^2",
     "@graphql-codegen/typescript-react-query": "^3",
-    "@project/eslint-config": "*",
-    "@project/types": "*",
+    "@graphql-eslint/eslint-plugin": "^3",
     "@types/node": "^16",
-    "@types/react": "^18"
+    "@types/react": "^18",
+    "eslint-plugin-tailwindcss": "^3"
   },
   "lint-staged": {
     "**/*.{js,cjs,mjs,ts,tsx}": [

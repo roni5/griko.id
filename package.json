@@ -16,14 +16,18 @@
     "website": "pnpm --dir website"
   },
   "devDependencies": {
+    "@grikomsn/style-guide": "latest",
     "env-cmd": "^10",
+    "eslint": "^8",
     "husky": "^8",
     "lint-staged": "^13",
+    "prettier": "^2",
     "turbo": "^1"
   },
-  "resolutions": {
-    "@next/eslint-plugin-next": "^12",
-    "node-fetch": "npm:node-fetch-native@latest"
+  "pnpm": {
+    "overrides": {
+      "node-fetch": "npm:node-fetch-native@latest"
+    }
   },
   "lint-staged": {
     "*.{js,json,md}": [
