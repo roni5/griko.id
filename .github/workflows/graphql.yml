@@ -20,7 +20,7 @@ jobs:
       - run: pnpm install
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_GITHUB_TOKEN }}
-      - run: pnpm website graphql-codegen
+      - run: pnpm website generate:ci
         env:
           GRAPHQL_ENDPOINT: ${{ secrets.GRAPHQL_ENDPOINT }}
           GRAPHQL_TOKEN: ${{ secrets.GRAPHQL_TOKEN }}
