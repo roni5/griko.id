@@ -20,7 +20,7 @@ jobs:
       - run: rm -rf pnpm-lock.yaml **/node_modules/
       - run: pnpm install
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_GITHUB_TOKEN }}
       - uses: EndBug/add-and-commit@v9
         with:
           message: "chore(deps): upgrade versions"
