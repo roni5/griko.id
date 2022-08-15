@@ -1,6 +1,6 @@
 import type { GetBlogPostQuery } from "__generated__/graphql";
 import { useGetBlogPostQuery, useGetBlogPostSlugsQuery } from "__generated__/graphql";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import metadataJson from "config/metadata";
 import { getMdxOptions } from "lib/markdown";
 import type { GetStaticPaths, GetStaticProps } from "next";

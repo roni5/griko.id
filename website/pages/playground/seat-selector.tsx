@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { PageHeader } from "ui/page/header";
 
 const EXAMPLE_SEATS = [

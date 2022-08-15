@@ -1,5 +1,5 @@
 import type { PostFieldsFragment } from "__generated__/graphql";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import metadataJson from "config/metadata";
 import { Link as LinkIcon, ShareIos as ShareIcon, Twitter as TwitterIcon } from "iconoir-react";
 import { createTwitterIntent } from "lib/twitter";

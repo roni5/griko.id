@@ -1,6 +1,6 @@
 import type { GetCustomPageQuery } from "__generated__/graphql";
 import { useGetCustomPageQuery, useGetCustomPageSlugsQuery } from "__generated__/graphql";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { getMdxOptions } from "lib/markdown";
 import type { GetStaticPaths, GetStaticProps } from "next";
 import type { MDXRemoteSerializeResult } from "next-mdx-remote";

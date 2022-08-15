@@ -1,5 +1,5 @@
 import { Tooltip, TooltipArrow, TooltipContent, TooltipTrigger } from "@radix-ui/react-tooltip";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import type { ReactNode } from "react";
 
 export interface LabelTooltipProps {

@@ -1,6 +1,6 @@
 import type { GetHomePageQuery } from "__generated__/graphql";
 import { useGetHomePageQuery } from "__generated__/graphql";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { Calendar } from "iconoir-react";
 import type { GetStaticProps } from "next";
 import { MDXRemote } from "next-mdx-remote";

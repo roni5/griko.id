@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { Anchor } from "ui/core/anchor";
 
 import { NavigationLink } from "./link";

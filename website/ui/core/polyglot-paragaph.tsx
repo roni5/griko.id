@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import { clsx } from "clsx";
 import type { ComponentProps, ReactNode } from "react";
 import { Children } from "react";
 
