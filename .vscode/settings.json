@@ -19,7 +19,7 @@
   },
   "css.validate": false,
   "eslint.packageManager": "pnpm",
-  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact", "graphql"],
+  "eslint.validate": ["graphql", "javascript", "javascriptreact", "typescript", "typescriptreact"],
   "eslint.workingDirectories": [
     {
       "!cwd": false,
@@ -30,5 +30,5 @@
       "pattern": "website"
     }
   ],
-  "npm.packageManager": "pnpm",
+  "npm.packageManager": "pnpm"
 }
