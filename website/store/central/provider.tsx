@@ -1,3 +1,5 @@
+import splitbee from "@splitbee/web";
+import { useSplitbee } from "hooks/use-splitbee";
 import { useRouter } from "next/router";
 import type { ReactNode } from "react";
 import { useEffect, useRef } from "react";
@@ -54,9 +56,14 @@ export function CentralProvider({ children }: CentralProviderProps) {
     return tinykeys(window, {
       "$mod+k": () => {
         toast(<span className="text-xs">Spotlight (formerly kbar) is under construction!</span>);
+        if (__PROD__) {
+          void splitbee.track("Open Spotlight");
+        }
       },
     });
   }, []);
+
+  useSplitbee();
 
   // eslint-disable-next-line react/jsx-no-useless-fragment
   return <>{children}</>;
