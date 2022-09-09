@@ -1,14 +1,13 @@
-import type { State } from "zustand";
 import create from "zustand";
 import { subscribeWithSelector } from "zustand/middleware";
 
-export interface CentralStore extends State {
+export interface CentralStore {
   cmdQuery: string;
   isCmdOpen: boolean;
 }
 
 export const useCentralStore = create(
-  subscribeWithSelector<CentralStore>((set, get) => ({
+  subscribeWithSelector<CentralStore>((_set, _get) => ({
     cmdQuery: "",
     isCmdOpen: false,
   })),
