@@ -2,9 +2,6 @@
 /// <reference path="./env.d.ts" />
 /// <reference path="./vercel.d.ts" />
 
-const { withSuperjson } = require("next-superjson");
-const withTranspileModules = require("next-transpile-modules");
-const packageJson = require("./package.json");
 const metadataJson = require("./config/metadata.json");
 const redirectsJson = require("./__generated__/redirects.json");
 const rewritesJson = require("./__generated__/rewrites.json");
@@ -23,7 +20,7 @@ const cspHeader = `
   .trim();
 
 /** @type {import("next").NextConfig} */
-let nextConfig = {
+const nextConfig = {
   eslint: {
     dirs: ["config", "hooks", "lib", "pages", "store", "ui", "utils"],
     ignoreDuringBuilds: Boolean(process.env.VERCEL),
@@ -71,10 +68,5 @@ let nextConfig = {
     return config;
   },
 };
-
-nextConfig = withSuperjson()(nextConfig);
-
-const localModules = Object.keys(packageJson.dependencies).filter((dep) => dep.startsWith("@project/"));
-nextConfig = withTranspileModules(localModules)(nextConfig);
 
 module.exports = nextConfig;
