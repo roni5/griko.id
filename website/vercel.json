@@ -1,4 +1,5 @@
 {
+  "buildCommand": "pnpm prebuild && pnpm build",
   "github": {
     "autoJobCancelation": true,
     "silent": true
