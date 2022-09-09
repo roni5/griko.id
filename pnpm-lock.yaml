@@ -23,9 +23,6 @@ importers:
       prettier: 2.7.1
       turbo: 1.4.6
 
-  packages/tailwind-animations:
-    specifiers: {}
-
   website:
     specifiers:
       '@fontsource/plus-jakarta-sans': ^4
@@ -38,7 +35,6 @@ importers:
       '@graphql-eslint/eslint-plugin': ^3
       '@grikomsn/private-fonts': '*'
       '@headlessui/react': ^1
-      '@project/tailwind-animations': '*'
       '@radix-ui/react-tooltip': ^1
       '@studio-freight/lenis': ^0
       '@tailwindcss/aspect-ratio': ^0
@@ -81,7 +77,6 @@ importers:
       '@fontsource/plus-jakarta-sans': 4.5.9
       '@grikomsn/private-fonts': 0.0.1
       '@headlessui/react': 1.7.0_biqbaboplfbrettd7655fr4n2y
-      '@project/tailwind-animations': link:../packages/tailwind-animations
       '@radix-ui/react-tooltip': 1.0.0_63dfw6rfgd64rl77ptfma4cvt4
       '@studio-freight/lenis': 0.2.1
       '@tailwindcss/aspect-ratio': 0.4.2_tailwindcss@3.1.8

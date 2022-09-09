@@ -24,7 +24,7 @@ const tailwindConfig = {
       );
     }),
   ],
-  presets: [require("@project/tailwind-animations")],
+  presets: [require("./tailwind.preset")],
   theme: {
     extend: {
       colors: {

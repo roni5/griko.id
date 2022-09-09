@@ -17,7 +17,6 @@
     "@fontsource/plus-jakarta-sans": "^4",
     "@grikomsn/private-fonts": "*",
     "@headlessui/react": "^1",
-    "@project/tailwind-animations": "*",
     "@radix-ui/react-tooltip": "^1",
     "@studio-freight/lenis": "^0",
     "@tailwindcss/aspect-ratio": "^0",
