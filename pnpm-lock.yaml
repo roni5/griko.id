@@ -36,6 +36,7 @@ importers:
       '@grikomsn/private-fonts': '*'
       '@headlessui/react': ^1
       '@radix-ui/react-tooltip': ^1
+      '@splitbee/web': ^0
       '@studio-freight/lenis': ^0
       '@tailwindcss/aspect-ratio': ^0
       '@tailwindcss/forms': ^0
@@ -77,6 +78,7 @@ importers:
       '@grikomsn/private-fonts': 0.0.1
       '@headlessui/react': 1.7.0_biqbaboplfbrettd7655fr4n2y
       '@radix-ui/react-tooltip': 1.0.0_63dfw6rfgd64rl77ptfma4cvt4
+      '@splitbee/web': 0.3.0
       '@studio-freight/lenis': 0.2.1
       '@tailwindcss/aspect-ratio': 0.4.2_tailwindcss@3.1.8
       '@tailwindcss/forms': 0.5.3_tailwindcss@3.1.8
@@ -1881,6 +1883,10 @@ packages:
   /@rushstack/eslint-patch/1.1.4:
     resolution: {integrity: sha512-LwzQKA4vzIct1zNZzBmRKI9QuNpLgTQMEjsQLf3BXuGYb3QPTP4Yjf6mkdX+X1mYttZ808QpOwAzZjv28kq7DA==}
     dev: true
+
+  /@splitbee/web/0.3.0:
+    resolution: {integrity: sha512-jNPDKg0GQGa4jCaBc6JQsv0NHmBA80WCwZE49nFyhcbo32WF0GyqXeice7ZApy7OUHI16bAUAzm4MOQw3gvxfQ==}
+    dev: false
 
   /@studio-freight/lenis/0.2.1:
     resolution: {integrity: sha512-U0H460uh3CXqVpEHBdmKWIp1s46U8FKOoNUumvETXx2OIZAjDTCmQOFsnMOca1lc3wEg5ghUYosCjbx99SHKAg==}
