@@ -1,10 +1,10 @@
 import splitbee from "@splitbee/web";
+import { useIsFetching } from "@tanstack/react-query";
 import { useSplitbee } from "hooks/use-splitbee";
 import { useRouter } from "next/router";
 import type { ReactNode } from "react";
 import { useEffect, useRef } from "react";
 import { toast } from "react-hot-toast";
-import { useIsFetching } from "react-query";
 import tinykeys from "tinykeys";
 import { ROUTE_LOADING_TIMEOUT, ROUTE_LOADING_TOAST_ID } from "utils/constants";
 

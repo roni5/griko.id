@@ -2,7 +2,7 @@
 /* eslint-disable */
 import { fetchOptions } from "lib/graphql";
 import { JsonValue } from "type-fest";
-import { useQuery, UseQueryOptions } from "react-query";
+import { useQuery, UseQueryOptions } from "@tanstack/react-query";
 export type Maybe<T> = T;
 export type InputMaybe<T> = T;
 export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
