@@ -37,7 +37,6 @@ importers:
       '@headlessui/react': ^1
       '@radix-ui/react-tooltip': ^1
       '@splitbee/web': ^0
-      '@studio-freight/lenis': ^0
       '@tailwindcss/aspect-ratio': ^0
       '@tailwindcss/forms': ^0
       '@tailwindcss/line-clamp': ^0
@@ -79,7 +78,6 @@ importers:
       '@headlessui/react': 1.7.0_biqbaboplfbrettd7655fr4n2y
       '@radix-ui/react-tooltip': 1.0.0_nylzxt5ale4dsv666zkb25cgtm
       '@splitbee/web': 0.3.0
-      '@studio-freight/lenis': 0.2.1
       '@tailwindcss/aspect-ratio': 0.4.2_tailwindcss@3.1.8
       '@tailwindcss/forms': 0.5.3_tailwindcss@3.1.8
       '@tailwindcss/line-clamp': 0.4.2_tailwindcss@3.1.8
@@ -1865,13 +1863,6 @@ packages:
 
   /@splitbee/web/0.3.0:
     resolution: {integrity: sha512-jNPDKg0GQGa4jCaBc6JQsv0NHmBA80WCwZE49nFyhcbo32WF0GyqXeice7ZApy7OUHI16bAUAzm4MOQw3gvxfQ==}
-    dev: false
-
-  /@studio-freight/lenis/0.2.1:
-    resolution: {integrity: sha512-U0H460uh3CXqVpEHBdmKWIp1s46U8FKOoNUumvETXx2OIZAjDTCmQOFsnMOca1lc3wEg5ghUYosCjbx99SHKAg==}
-    dependencies:
-      tiny-emitter: 2.1.0
-      virtual-scroll: 2.2.1
     dev: false
 
   /@swc/helpers/0.4.11:
@@ -6804,10 +6795,6 @@ packages:
     resolution: {integrity: sha512-w89qg7PI8wAdvX60bMDP+bFoD5Dvhm9oLheFp5O4a2QF0cSBGsBX4qZmadPMvVqlLJBBci+WqGGOAPvcDeNSVg==}
     dev: true
 
-  /tiny-emitter/2.1.0:
-    resolution: {integrity: sha512-NB6Dk1A9xgQPMoGqC5CVXn123gWyte215ONT5Pp5a0yt4nlEoO1ZWeCwpncaekPHXO60i47ihFnZPiRPjRMq4Q==}
-    dev: false
-
   /tiny-glob/0.2.9:
     resolution: {integrity: sha512-g/55ssRPUjShh+xkfx9UPDXqhckHEsHr4Vd9zX55oSdGZc/MD0m3sferOkwWtp98bv+kcVfEHtRJgBVJzelrzg==}
     dependencies:
@@ -7280,12 +7267,6 @@ packages:
       is-buffer: 2.0.5
       unist-util-stringify-position: 3.0.2
       vfile-message: 3.1.2
-    dev: false
-
-  /virtual-scroll/2.2.1:
-    resolution: {integrity: sha512-RvjcLxluh7B/6GPzLgQ9d0NYG4yqEguTc3MU7AvxyPVltuo2Cq5RokTL9RKUaZCMJ64in2hus0d03gTtoHp55g==}
-    dependencies:
-      tiny-emitter: 2.1.0
     dev: false
 
   /vscode-oniguruma/1.6.2:

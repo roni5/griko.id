@@ -1,4 +1,3 @@
-import { useLenis } from "hooks/use-lenis";
 import dynamic from "next/dynamic";
 import Head from "next/head";
 import { useRouter } from "next/router";
@@ -16,7 +15,6 @@ export interface LayoutProps {
 
 export function Layout({ children }: LayoutProps) {
   const router = useRouter();
-  useLenis();
   return (
     <>
       <Head>
