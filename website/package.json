@@ -5,7 +5,6 @@
     "build": "next build",
     "dev": "pnpm prebuild && next dev",
     "export": "next export",
-    "favicons": "npx favicons-compiled-cli -i public/icon.png -c config/favicons.json -o public/assets/",
     "generate": "env-cmd pnpm graphql-codegen",
     "generate:ci": "graphql-codegen",
     "lint": "eslint --fix \"**/*.{js,cjs,mjs,jsx,graphql,gql,ts,tsx}\" && tsc --noEmit --pretty",
