@@ -9,6 +9,14 @@ export default class CustomDocument extends Document {
           <meta charSet="UTF-8" />
           <meta content="ie=edge" httpEquiv="X-UA-Compatible" />
           <FaviconsMetaTags />
+          {process.env.NEXT_PUBLIC_TINYBIRD_TOKEN && (
+            <script
+              data-host="https://api.us-east.tinybird.co"
+              data-token={process.env.NEXT_PUBLIC_TINYBIRD_TOKEN}
+              defer
+              src="https://unpkg.com/@tinybirdco/flock.js"
+            />
+          )}
         </Head>
         <body>
           <Main />

@@ -4,6 +4,7 @@ declare namespace NodeJS {
     readonly GRAPHQL_TOKEN: string;
     readonly NEXT_PUBLIC_AXIOM_INGEST_ENDPOINT: string;
     readonly NEXT_PUBLIC_SPLITBEE_TOKEN: string;
+    readonly NEXT_PUBLIC_TINYBIRD_TOKEN: string;
   }
 }
 
