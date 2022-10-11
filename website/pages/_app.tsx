@@ -5,22 +5,12 @@ import "styles/index.css";
 import { TooltipProvider } from "@radix-ui/react-tooltip";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { queryClient } from "lib/react-query";
-import type { AppProps, NextWebVitalsMetric } from "next/app";
+import type { AppProps } from "next/app";
 import { CentralProvider } from "store/central/provider";
 import { MarkdownProvider } from "store/markdown/provider";
 import { Layout } from "ui/layout";
 
-export function reportWebVitals(metric: NextWebVitalsMetric) {
-  const ENDPOINT = process.env.NEXT_PUBLIC_AXIOM_INGEST_ENDPOINT;
-  if (!ENDPOINT) return;
-
-  const body = JSON.stringify({ route: window.__NEXT_DATA__.page, ...metric });
-  if (navigator.sendBeacon) {
-    navigator.sendBeacon(ENDPOINT, body);
-  } else {
-    void fetch(ENDPOINT, { body, method: "POST", keepalive: true });
-  }
-}
+export { reportWebVitals } from "next-axiom";
 
 export default function CustomApp({ Component, pageProps }: AppProps) {
   return (

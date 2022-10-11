@@ -20,7 +20,7 @@ const cspHeader = `
   .trim();
 
 /** @type {import("next").NextConfig} */
-const nextConfig = {
+let nextConfig = {
   eslint: {
     dirs: ["config", "hooks", "lib", "pages", "store", "ui", "utils"],
     ignoreDuringBuilds: Boolean(process.env.VERCEL),
@@ -68,5 +68,8 @@ const nextConfig = {
     return config;
   },
 };
+
+// https://github.com/axiomhq/next-axiom
+nextConfig = require("next-axiom").withAxiom(nextConfig);
 
 module.exports = nextConfig;

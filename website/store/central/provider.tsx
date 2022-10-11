@@ -1,5 +1,6 @@
 import { useIsFetching } from "@tanstack/react-query";
 import { useRouter } from "next/router";
+import { log } from "next-axiom";
 import type { ReactNode } from "react";
 import { useEffect, useRef } from "react";
 import { toast } from "react-hot-toast";
@@ -54,6 +55,7 @@ export function CentralProvider({ children }: CentralProviderProps) {
     return tinykeys(window, {
       "$mod+k": () => {
         toast(<span className="text-xs">Spotlight (formerly kbar) is under construction!</span>);
+        log.info("Open Spotlight");
       },
     });
   }, []);
