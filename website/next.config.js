@@ -54,11 +54,7 @@ const nextConfig = {
     { source: "/works", destination: "/work", permanent: true },
     ...redirectsJson,
   ],
-  rewrites: async () => [
-    { source: "/bee.js", destination: "https://cdn.splitbee.io/sb.js" },
-    { source: "/_hive/:slug", destination: "https://hive.splitbee.io/:slug" },
-    ...rewritesJson,
-  ],
+  rewrites: async () => [...rewritesJson],
   typescript: {
     ignoreBuildErrors: Boolean(process.env.VERCEL),
   },
