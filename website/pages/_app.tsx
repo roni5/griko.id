@@ -4,6 +4,7 @@ import "styles/index.css";
 
 import { TooltipProvider } from "@radix-ui/react-tooltip";
 import { QueryClientProvider } from "@tanstack/react-query";
+import { Analytics } from "@vercel/analytics/react";
 import { queryClient } from "lib/react-query";
 import type { AppProps } from "next/app";
 import { CentralProvider } from "store/central/provider";
@@ -15,6 +16,7 @@ export { reportWebVitals } from "next-axiom";
 const CustomApp = ({ Component, pageProps }: AppProps) => {
   return (
     <QueryClientProvider client={queryClient}>
+      <Analytics />
       <CentralProvider />
       <TooltipProvider>
         <MarkdownProvider>
