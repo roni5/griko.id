@@ -15,15 +15,14 @@ export { reportWebVitals } from "next-axiom";
 const CustomApp = ({ Component, pageProps }: AppProps) => {
   return (
     <QueryClientProvider client={queryClient}>
-      <CentralProvider>
-        <TooltipProvider>
-          <MarkdownProvider>
-            <Layout>
-              <Component {...pageProps} />
-            </Layout>
-          </MarkdownProvider>
-        </TooltipProvider>
-      </CentralProvider>
+      <CentralProvider />
+      <TooltipProvider>
+        <MarkdownProvider>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </MarkdownProvider>
+      </TooltipProvider>
     </QueryClientProvider>
   );
 };

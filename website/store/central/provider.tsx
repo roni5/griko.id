@@ -8,7 +8,7 @@ import tinykeys from "tinykeys";
 import { ROUTE_LOADING_TIMEOUT, ROUTE_LOADING_TOAST_ID } from "utils/constants";
 
 export interface CentralProviderProps {
-  children: ReactNode;
+  children?: ReactNode;
 }
 
 export const CentralProvider = ({ children }: CentralProviderProps) => {
