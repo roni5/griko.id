@@ -2,7 +2,7 @@ import { GitHub as Github, Heart, Twitter } from "iconoir-react";
 import { Anchor } from "ui/core/anchor";
 import { Mastodon } from "ui/icon/mastodon";
 
-export function Footer() {
+export const Footer = () => {
   return (
     <footer className="my-16 flex flex-col items-center space-y-1 py-8 text-center text-2xs text-neutral-400">
       <p>Made using Next.js and Tailwind CSS. Hosted on Vercel.</p>
@@ -37,4 +37,4 @@ export function Footer() {
       </div>
     </footer>
   );
-}
+};

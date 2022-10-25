@@ -2,7 +2,7 @@ import metadataJson from "config/metadata";
 import { useRouter } from "next/router";
 import { DefaultSeo } from "next-seo";
 
-export function MetaTags() {
+export const MetaTags = () => {
   const router = useRouter();
 
   return (
@@ -24,4 +24,4 @@ export function MetaTags() {
       }}
     />
   );
-}
+};

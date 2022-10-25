@@ -10,7 +10,7 @@ const EXAMPLE_SEATS = [
 
 const COLUMNS = Math.max(...EXAMPLE_SEATS.map((row) => row.length));
 
-export default function SeatSelectorPage() {
+const SeatSelectorPage = () => {
   return (
     <section className="space-y-8">
       <PageHeader
@@ -32,14 +32,16 @@ export default function SeatSelectorPage() {
       </div>
     </section>
   );
-}
+};
+
+export default SeatSelectorPage;
 
 interface SeatProps {
   id: string;
   state: number;
 }
 
-function Seat({ id, state }: SeatProps) {
+const Seat = ({ id, state }: SeatProps) => {
   return (
     <button
       className={clsx(
@@ -59,4 +61,4 @@ function Seat({ id, state }: SeatProps) {
       {id}
     </button>
   );
-}
+};

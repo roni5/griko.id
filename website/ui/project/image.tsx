@@ -7,7 +7,7 @@ export interface ProjectImageProps extends OmitChildren<ComponentProps<"div">> {
   alt?: string;
 }
 
-export function ProjectImage({ src, alt, className, ...rest }: ProjectImageProps) {
+export const ProjectImage = ({ src, alt, className, ...rest }: ProjectImageProps) => {
   return (
     <div
       className={clsx(
@@ -28,4 +28,4 @@ export function ProjectImage({ src, alt, className, ...rest }: ProjectImageProps
       />
     </div>
   );
-}
+};

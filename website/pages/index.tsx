@@ -27,7 +27,7 @@ export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
   };
 };
 
-export default function HomePage({ query, compiledExcerpt }: HomePageProps) {
+const HomePage = ({ query, compiledExcerpt }: HomePageProps) => {
   return (
     <section className="space-y-8">
       <div className="prose prose-invert py-[10vh] md:py-[20vh]">
@@ -89,4 +89,6 @@ export default function HomePage({ query, compiledExcerpt }: HomePageProps) {
       </div>
     </section>
   );
-}
+};
+
+export default HomePage;

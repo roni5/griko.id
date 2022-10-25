@@ -46,7 +46,7 @@ export const getStaticPaths: GetStaticPaths<CustomPageParams> = async () => {
   };
 };
 
-export default function CustomPage({ query, compiledContent }: CustomPageProps) {
+const CustomPage = ({ query, compiledContent }: CustomPageProps) => {
   return (
     <section className="space-y-16">
       <NextSeo description={query.page.description} title={query.page.title} />
@@ -66,4 +66,6 @@ export default function CustomPage({ query, compiledContent }: CustomPageProps) 
       </article>
     </section>
   );
-}
+};
+
+export default CustomPage;

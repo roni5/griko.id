@@ -3,7 +3,7 @@ import { Anchor } from "ui/core/anchor";
 
 import { NotifyBar } from ".";
 
-export function BulmaNotifyBar() {
+export const BulmaNotifyBar = () => {
   const [show, setShow] = useState(() => false);
   useEffect(() => {
     if (__PROD__) setShow(document.referrer.includes("bulma.io"));
@@ -24,4 +24,4 @@ export function BulmaNotifyBar() {
       </p>
     </NotifyBar>
   ) : null;
-}
+};

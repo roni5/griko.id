@@ -8,7 +8,7 @@ export interface PostItemProps {
   data: PostFieldsFragment;
 }
 
-export function PostItem({ data }: PostItemProps) {
+export const PostItem = ({ data }: PostItemProps) => {
   const Icon = data.redirect ? ExternalIcon : LinkIcon;
   return (
     <li className="group relative flex flex-col p-4 sm:rounded-xl sm:hover:bg-neutral-800">
@@ -36,4 +36,4 @@ export function PostItem({ data }: PostItemProps) {
       </Anchor>
     </li>
   );
-}
+};

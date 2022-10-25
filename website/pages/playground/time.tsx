@@ -2,7 +2,7 @@ import { useSeo } from "hooks/use-seo";
 import { Ticker as TimeTicker } from "store/time/ticker";
 import { Zone } from "ui/time/zone";
 
-export default function TimePage() {
+const TimePage = () => {
   const { Seo } = useSeo({
     title: "Time",
     description: "Track what's my current time and somewhere else",
@@ -22,4 +22,6 @@ export default function TimePage() {
       </div>
     </section>
   );
-}
+};
+
+export default TimePage;

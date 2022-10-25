@@ -17,7 +17,7 @@ export const getStaticProps: GetStaticProps<TalkPageProps> = async () => {
   };
 };
 
-export default function TalkPage({ query }: TalkPageProps) {
+const TalkPage = ({ query }: TalkPageProps) => {
   const { Seo, title, description } = useSeo({
     title: "Recent Appearances",
     description: "Talks, meetups, and other appearances from various events",
@@ -34,4 +34,6 @@ export default function TalkPage({ query }: TalkPageProps) {
       </ul>{" "}
     </section>
   );
-}
+};
+
+export default TalkPage;

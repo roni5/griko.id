@@ -13,7 +13,7 @@ export interface LayoutProps {
   children: ReactNode;
 }
 
-export function Layout({ children }: LayoutProps) {
+export const Layout = ({ children }: LayoutProps) => {
   const router = useRouter();
   return (
     <>
@@ -32,4 +32,4 @@ export function Layout({ children }: LayoutProps) {
       <Toaster position="top-center" />
     </>
   );
-}
+};

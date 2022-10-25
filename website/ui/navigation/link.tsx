@@ -9,7 +9,7 @@ export interface NavigationLinkProps {
   href: string;
 }
 
-export function NavigationLink({ children, href }: NavigationLinkProps) {
+export const NavigationLink = ({ children, href }: NavigationLinkProps) => {
   const router = useRouter();
   const isActive = router.asPath.startsWith(href);
 
@@ -32,4 +32,4 @@ export function NavigationLink({ children, href }: NavigationLinkProps) {
       </Anchor>
     </Link>
   );
-}
+};

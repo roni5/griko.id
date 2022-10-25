@@ -4,14 +4,11 @@ import create from "zustand";
 
 export const useTimeStore = create(() => ({ time: new Date() }));
 
-export function setTime(time: Date) {
+export const setTime = (time: Date) => {
   useTimeStore.setState({ time });
-}
+};
 
-export function useCurrentTime(): Date;
-export function useCurrentTime(format: string, tz?: string): string;
-
-export function useCurrentTime(format?: string, tz = "Asia/Jakarta") {
+export const useCurrentTime = <T extends string | undefined>(format?: T, tz = "Asia/Jakarta") => {
   const { time } = useTimeStore();
 
   const memoized = useMemo(() => {
@@ -21,5 +18,5 @@ export function useCurrentTime(format?: string, tz = "Asia/Jakarta") {
     return time;
   }, [time, tz, format]);
 
-  return memoized;
-}
+  return memoized as T extends string ? string : Date;
+};

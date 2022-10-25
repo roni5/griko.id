@@ -2,7 +2,7 @@ import { useSeo } from "hooks/use-seo";
 import { Anchor } from "ui/core/anchor";
 import { PageHeader } from "ui/page/header";
 
-export default function Sponsors() {
+const Sponsors = () => {
   const { Seo, title, description } = useSeo({
     title: "Sponsors and Backers",
     description: "Huge thanks to my sponsors and backers both on GitHub and Patreon",
@@ -26,4 +26,6 @@ export default function Sponsors() {
       </div>
     </section>
   );
-}
+};
+
+export default Sponsors;

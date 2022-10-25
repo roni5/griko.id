@@ -13,15 +13,15 @@ export const useCentralStore = create(
   })),
 );
 
-export function setCmdQuery(cmdQuery: CentralStore["cmdQuery"]) {
+export const setCmdQuery = (cmdQuery: CentralStore["cmdQuery"]) => {
   useCentralStore.setState({ cmdQuery });
-}
-export function openCmd() {
+};
+export const openCmd = () => {
   useCentralStore.setState({ isCmdOpen: true });
-}
-export function closeCmd() {
+};
+export const closeCmd = () => {
   useCentralStore.setState({ isCmdOpen: false });
-}
-export function toggleCmd() {
+};
+export const toggleCmd = () => {
   useCentralStore.setState((prev) => ({ isCmdOpen: !prev.isCmdOpen }));
-}
+};

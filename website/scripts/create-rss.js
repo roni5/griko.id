@@ -10,11 +10,11 @@ const path = require("path");
 const metadataJson = require("../config/metadata.json");
 const { gql, rawRequest } = require("../lib/graphql.utils");
 
-function cwd(...args) {
+const cwd = (...args) => {
   return path.resolve(process.cwd(), ...args);
-}
+};
 
-async function createRss() {
+const createRss = async () => {
   const feed = new Feed({
     title: metadataJson.name,
     description: metadataJson.description,
@@ -66,7 +66,7 @@ async function createRss() {
     fs.writeFile(cwd("public/blog/feed.json"), feed.json1(), { encoding: "utf-8" }),
     fs.writeFile(cwd("public/blog/rss.xml"), feed.rss2(), { encoding: "utf-8" }),
   ]);
-}
+};
 
 if (require.main === module) {
   void createRss();

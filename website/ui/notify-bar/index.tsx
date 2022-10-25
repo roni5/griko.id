@@ -13,7 +13,7 @@ export type NotifyBarProps = ComponentProps<"div"> & {
   type?: NotifyBarType;
 };
 
-export function NotifyBar({ children, className, type = "info", ...rest }: NotifyBarProps) {
+export const NotifyBar = ({ children, className, type = "info", ...rest }: NotifyBarProps) => {
   const Icon = ICON_MAP[type];
   return (
     <div
@@ -36,7 +36,7 @@ export function NotifyBar({ children, className, type = "info", ...rest }: Notif
       <div className="max-w-4xl flex-grow">{children}</div>
     </div>
   );
-}
+};
 
 const ICON_MAP = {
   info: Info,

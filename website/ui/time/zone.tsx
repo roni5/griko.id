@@ -4,7 +4,7 @@ export interface ZoneProps {
   tz: string;
 }
 
-export function Zone({ tz }: ZoneProps) {
+export const Zone = ({ tz }: ZoneProps) => {
   return (
     <div className="space-y-2 py-8 md:space-y-4">
       <div className="text-lg text-neutral-500 md:text-2xl">Time in {tz}</div>
@@ -16,4 +16,4 @@ export function Zone({ tz }: ZoneProps) {
       </p>
     </div>
   );
-}
+};

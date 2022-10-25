@@ -22,17 +22,17 @@ export const rehypeAutolinkHeadingsOptions: RehypeAutolinkHeadingsOptions = {
 };
 
 export const rehypePrettyCodeOptions: Partial<Options> = {
-  onVisitHighlightedLine<T extends Element>(node: T) {
+  onVisitHighlightedLine: <T extends Element>(node: T) => {
     if (node.properties && Array.isArray(node.properties.className)) {
       node.properties.className.push("highlighted");
     }
   },
-  onVisitHighlightedWord<T extends Element>(node: T) {
+  onVisitHighlightedWord: <T extends Element>(node: T) => {
     if (node.properties) {
       node.properties.className = ["word"];
     }
   },
-  onVisitLine<T extends Element>(node: T) {
+  onVisitLine: <T extends Element>(node: T) => {
     if (node.children.length === 0) {
       node.children = [{ type: "text", value: " " }];
     }

@@ -56,7 +56,7 @@ export const getStaticPaths: GetStaticPaths<BlogPostPageParams> = async () => {
   };
 };
 
-export default function BlogPostPage({ query, compiledContent }: BlogPostPageProps) {
+const BlogPostPage = ({ query, compiledContent }: BlogPostPageProps) => {
   return (
     <section className="space-y-16">
       {query.post.redirect && (
@@ -109,4 +109,6 @@ export default function BlogPostPage({ query, compiledContent }: BlogPostPagePro
       </article>
     </section>
   );
-}
+};
+
+export default BlogPostPage;

@@ -11,7 +11,7 @@ export interface CentralProviderProps {
   children: ReactNode;
 }
 
-export function CentralProvider({ children }: CentralProviderProps) {
+export const CentralProvider = ({ children }: CentralProviderProps) => {
   const isFetching = useIsFetching();
 
   useEffect(() => {
@@ -30,16 +30,16 @@ export function CentralProvider({ children }: CentralProviderProps) {
   const timeout = useRef<NodeJS.Timeout>();
 
   useEffect(() => {
-    function start() {
+    const start = () => {
       if (timeout.current) clearTimeout(timeout.current);
       timeout.current = setTimeout(() => {
         toast.loading("Loading page...", { id: ROUTE_LOADING_TOAST_ID });
       }, ROUTE_LOADING_TIMEOUT);
-    }
-    function end() {
+    };
+    const end = () => {
       if (timeout.current) clearTimeout(timeout.current);
       toast.dismiss(ROUTE_LOADING_TOAST_ID);
-    }
+    };
     router.events.on("routeChangeStart", start);
     router.events.on("routeChangeError", end);
     router.events.on("routeChangeComplete", end);
@@ -62,4 +62,4 @@ export function CentralProvider({ children }: CentralProviderProps) {
 
   // eslint-disable-next-line react/jsx-no-useless-fragment
   return <>{children}</>;
-}
+};

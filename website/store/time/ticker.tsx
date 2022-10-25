@@ -2,17 +2,17 @@ import { useEffect, useRef } from "react";
 
 import { setTime } from ".";
 
-export function Ticker() {
+export const Ticker = () => {
   const raf = useRef<number>();
 
-  function tick() {
+  const tick = () => {
     try {
       setTime(new Date());
       raf.current = requestAnimationFrame(tick);
     } catch {
       //
     }
-  }
+  };
 
   useEffect(() => {
     raf.current = requestAnimationFrame(tick);
@@ -25,4 +25,4 @@ export function Ticker() {
   }, []);
 
   return null;
-}
+};

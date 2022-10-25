@@ -7,7 +7,7 @@ export interface TalkItemProps {
   data: TalkFieldsFragment;
 }
 
-export function TalkItem({ data }: TalkItemProps) {
+export const TalkItem = ({ data }: TalkItemProps) => {
   return (
     <li className="group relative flex flex-col p-4 sm:rounded-xl sm:hover:bg-neutral-800">
       <h4 className="mb-2 text-lg font-bold line-clamp-3">{data.title}</h4>
@@ -29,4 +29,4 @@ export function TalkItem({ data }: TalkItemProps) {
       </Anchor>
     </li>
   );
-}
+};

@@ -19,7 +19,7 @@ export const getStaticProps: GetStaticProps<BlogPageProps> = async () => {
   };
 };
 
-export default function BlogPage({ query }: BlogPageProps) {
+const BlogPage = ({ query }: BlogPageProps) => {
   const { Seo, title, description } = useSeo({
     title: "Writings",
     description: "My blog posts covering web development, personal thoughts, and various things",
@@ -47,4 +47,6 @@ export default function BlogPage({ query }: BlogPageProps) {
       </ul>
     </section>
   );
-}
+};
+
+export default BlogPage;

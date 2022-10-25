@@ -2,7 +2,7 @@ import { Cancel } from "iconoir-react";
 import { NextSeo } from "next-seo";
 import { Anchor } from "ui/core/anchor";
 
-export default function ServerErrorPage() {
+const ServerErrorPage = () => {
   return (
     <section className="space-y-8 py-[5rem] md:py-[10rem]">
       <NextSeo title="Internal Server Error" />
@@ -15,4 +15,6 @@ export default function ServerErrorPage() {
       </article>
     </section>
   );
-}
+};
+
+export default ServerErrorPage;

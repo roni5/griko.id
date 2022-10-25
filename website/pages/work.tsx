@@ -18,7 +18,7 @@ export const getStaticProps: GetStaticProps<WorkPageProps> = async () => {
   };
 };
 
-export default function WorkPage({ query }: WorkPageProps) {
+const WorkPage = ({ query }: WorkPageProps) => {
   const { Seo, title, description } = useSeo({
     title: "Recent Projects",
     description: "Curated handcrafted projects I have made in the past",
@@ -44,4 +44,6 @@ export default function WorkPage({ query }: WorkPageProps) {
       </ul>
     </section>
   );
-}
+};
+
+export default WorkPage;

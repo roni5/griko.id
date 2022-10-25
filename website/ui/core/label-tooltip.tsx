@@ -7,7 +7,7 @@ export interface LabelTooltipProps {
   children: ReactNode;
 }
 
-export function LabelTooltip({ label, children }: LabelTooltipProps) {
+export const LabelTooltip = ({ label, children }: LabelTooltipProps) => {
   return (
     <Tooltip>
       <TooltipTrigger asChild>{children}</TooltipTrigger>
@@ -24,4 +24,4 @@ export function LabelTooltip({ label, children }: LabelTooltipProps) {
       </TooltipContent>
     </Tooltip>
   );
-}
+};

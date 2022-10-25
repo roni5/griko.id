@@ -3,8 +3,8 @@ export interface NavigatorWrapProps {
   has?: keyof Navigator;
 }
 
-export function NavigatorWrap({ children, has: key }: NavigatorWrapProps) {
+export const NavigatorWrap = ({ children, has: key }: NavigatorWrapProps) => {
   if (typeof navigator === "undefined") return null;
   if (key) if (!(key in navigator)) return null;
   return children({ navigator });
-}
+};

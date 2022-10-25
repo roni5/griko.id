@@ -2,7 +2,7 @@ import { Cancel } from "iconoir-react";
 import { NextSeo } from "next-seo";
 import { Anchor } from "ui/core/anchor";
 
-export default function NotFoundPage() {
+const NotFoundPage = () => {
   return (
     <section className="space-y-8 py-[5rem] md:py-[10rem]">
       <NextSeo title="Not Found" />
@@ -15,4 +15,6 @@ export default function NotFoundPage() {
       </article>
     </section>
   );
-}
+};
+
+export default NotFoundPage;

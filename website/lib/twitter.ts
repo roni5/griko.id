@@ -8,7 +8,7 @@ export type TwitterIntentQuery = Partial<{
   in_reply_to: string;
 }>;
 
-export function createTwitterIntent(query: TwitterIntentQuery) {
+export const createTwitterIntent = (query: TwitterIntentQuery) => {
   const parsedQuery = new URLSearchParams(query).toString();
   return `https://twitter.com/intent/tweet?${parsedQuery}`;
-}
+};

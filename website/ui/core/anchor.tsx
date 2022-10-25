@@ -6,9 +6,10 @@ export type AnchorProps = ComponentProps<"a"> & {
   external?: boolean;
 };
 
+// eslint-disable-next-line react/display-name
 export const Anchor = forwardRef<HTMLAnchorElement, AnchorProps>(
   //
-  function Anchor({ children, external, href = "", ...rest }, ref) {
+  ({ children, external, href = "", ...rest }, ref) => {
     const isApi = href.startsWith("/api");
     const isHash = href.startsWith("#");
     const isRelative = href.startsWith("/");
@@ -28,11 +29,11 @@ export const Anchor = forwardRef<HTMLAnchorElement, AnchorProps>(
   },
 );
 
-export function AnchorCompat(props) {
+export const AnchorCompat = (props) => {
   // eslint-disable-next-line jsx-a11y/anchor-has-content
   return <Anchor {...props} />;
-}
+};
 
-function trimHttp(str: string) {
+const trimHttp = (str: string) => {
   return str.replace(/https?:\/\//, "");
-}
+};

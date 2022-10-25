@@ -1,11 +1,11 @@
 // tsc --allowJs -d --emitDeclarationOnly --removeComments lib/graphql.utils.js
 
 /** @param {TemplateStringsArray} strs */
-function gql(strs, ...args) {
+const gql = (strs, ...args) => {
   return strs.map((t, i) => [t, String(args[i] ?? "")].join("")).join("");
-}
+};
 
-async function rawRequest(query = "{}", variables = {}) {
+const rawRequest = async (query = "{}", variables = {}) => {
   const res = await fetch(process.env.GRAPHQL_ENDPOINT, {
     body: JSON.stringify({ query, variables }),
     headers: {
@@ -19,7 +19,7 @@ async function rawRequest(query = "{}", variables = {}) {
     throw new Error(message);
   }
   return json.data;
-}
+};
 
 module.exports = {
   gql,

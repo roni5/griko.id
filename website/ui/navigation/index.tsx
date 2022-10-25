@@ -4,7 +4,7 @@ import { Anchor } from "ui/core/anchor";
 import { NavigationLink } from "./link";
 import { routes } from "./routes";
 
-export function Navigation() {
+export const Navigation = () => {
   return (
     <div
       className={clsx(
@@ -36,4 +36,4 @@ export function Navigation() {
       </nav>
     </div>
   );
-}
+};

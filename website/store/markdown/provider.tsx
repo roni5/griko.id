@@ -6,10 +6,10 @@ export interface MarkdownProviderProps {
   children: ReactNode;
 }
 
-export function MarkdownProvider({ children }: MarkdownProviderProps) {
+export const MarkdownProvider = ({ children }: MarkdownProviderProps) => {
   return (
     <MDXProvider components={components} disableParentContext>
       {children}
     </MDXProvider>
   );
-}
+};

@@ -12,17 +12,17 @@ const { gql, rawRequest } = require("../lib/graphql.utils");
  * @param {any} data
  * @param {Record<string,any>} extras
  */
-function transformRoutes(data, extras = {}) {
+const transformRoutes = (data, extras = {}) => {
   const entries = Object.entries(data);
   const transformed = entries.map(([slug, destination]) => ({ source: `/${slug}`, destination, ...extras }));
   return JSON.stringify(transformed, null, 2);
-}
+};
 
-function cwd(...args) {
+const cwd = (...args) => {
   return path.resolve(process.cwd(), ...args);
-}
+};
 
-async function getRemoteRoutes() {
+const getRemoteRoutes = async () => {
   const { route } = await rawRequest(gql`
     {
       route {
@@ -37,7 +37,7 @@ async function getRemoteRoutes() {
     fs.writeFile(redirectsJsonPath, transformRoutes(route.redirects, { permanent: false }), { encoding: "utf-8" }),
     fs.writeFile(rewritesJsonPath, transformRoutes(route.rewrites), { encoding: "utf-8" }),
   ]);
-}
+};
 
 if (require.main === module) {
   void getRemoteRoutes();

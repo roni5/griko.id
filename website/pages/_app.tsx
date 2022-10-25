@@ -12,7 +12,7 @@ import { Layout } from "ui/layout";
 
 export { reportWebVitals } from "next-axiom";
 
-export default function CustomApp({ Component, pageProps }: AppProps) {
+const CustomApp = ({ Component, pageProps }: AppProps) => {
   return (
     <QueryClientProvider client={queryClient}>
       <CentralProvider>
@@ -26,4 +26,6 @@ export default function CustomApp({ Component, pageProps }: AppProps) {
       </CentralProvider>
     </QueryClientProvider>
   );
-}
+};
+
+export default CustomApp;

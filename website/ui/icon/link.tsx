@@ -1,6 +1,6 @@
 import { el } from "utils/markdown";
 
-export function LinkIcon() {
+export const LinkIcon = () => {
   return (
     <svg {...LinkIconHast.properties}>
       {LinkIconHast.children.map((node, i) => (
@@ -8,7 +8,7 @@ export function LinkIcon() {
       ))}
     </svg>
   );
-}
+};
 
 export const LinkIconHast = el({
   type: "element",

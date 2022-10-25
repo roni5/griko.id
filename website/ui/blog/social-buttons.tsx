@@ -14,16 +14,16 @@ export interface SocialButtonsProps extends OmitChildren<ComponentProps<"div">> 
   post: PostFieldsFragment;
 }
 
-export function SocialButtons({ post, className, ...rest }: SocialButtonsProps) {
+export const SocialButtons = ({ post, className, ...rest }: SocialButtonsProps) => {
   const url = `${metadataJson.url}/blog/${post.slug}`;
 
-  async function handleShare(navigator: Navigator) {
+  const handleShare = async (navigator: Navigator) => {
     await toast.promise(navigator.share({ title: post.title, url }), {
       loading: "Sharing post...",
       success: "Shared post!",
       error: "Something went wrong!",
     });
-  }
+  };
 
   const intentLink = createTwitterIntent({
     text: post.title,
@@ -31,14 +31,14 @@ export function SocialButtons({ post, className, ...rest }: SocialButtonsProps) 
     url,
   });
 
-  async function handleClipboard(event: MouseEvent) {
+  const handleClipboard = async (event: MouseEvent) => {
     if (navigator.clipboard) event.preventDefault();
     await toast.promise(navigator.clipboard.writeText(url), {
       loading: "Copying post link...",
       success: "Copied post link to clipboard!",
       error: "Something went wrong!",
     });
-  }
+  };
 
   return (
     <div className={clsx("flex items-center space-x-4 text-neutral-400", className)} {...rest}>
@@ -63,4 +63,4 @@ export function SocialButtons({ post, className, ...rest }: SocialButtonsProps) 
       </LabelTooltip>
     </div>
   );
-}
+};

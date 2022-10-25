@@ -1,3 +1,3 @@
-export function Spotlight() {
+export const Spotlight = () => {
   return null; // TODO
-}
+};
