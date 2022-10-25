@@ -16,7 +16,7 @@ export const Anchor = forwardRef<HTMLAnchorElement, AnchorProps>(
     const isExternal = typeof external === "boolean" ? external : isApi || (!isHash && !isRelative);
 
     const Wrap = (isExternal ? Fragment : Link) as ComponentType<any>;
-    const wrapProps = isExternal ? {} : { href };
+    const wrapProps = isExternal ? {} : { href, legacyBehavior: true };
     const linkProps = isExternal ? { target: "_blank" } : {};
 
     return (
